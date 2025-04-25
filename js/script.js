@@ -10,19 +10,15 @@
 function findMovieType() {
   // input
   const userage = parseInt(document.getElementById('age').value)
-
   // process
-  if (userage => 18) {
-    // output
-    document.getElementById('movie type').innerHTML =
-      '<p>You can go see an NC-17 rated movie alone</p>'
-  } else if (userage => 17) {
+  
+  if (userage >= 17) {
     document.getElementById('movie type').innerHTML =
       '<p>You can go see an R rated movie alone</p>'
-  } else if (userage => 13) {
+  } else if (userage >= 13) {
     document.getElementById('movie type').innerHTML =
       '<p>You can go see a PG-13 rated movie alone</p>'
-  } else if (userage => 13) {
+  } else if (userage >= 5) {
     document.getElementById('movie type').innerHTML =
       '<p>You can go see a G and PG rated movie alone</p>'
   } else {
